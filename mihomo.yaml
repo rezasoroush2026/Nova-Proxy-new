@@ -31,6 +31,18 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: "📢 https://t.me/irnova_proxy", server: 192.0.2.1, port: 443, type: vmess, uuid: 397fa3f8-22f0-4f2b-a2c1-12915b52e264, alterId: 0, cipher: auto, tls: true, servername: "gentle-dusk-d5de.misty-finch-8d0b.workers.dev", network: ws, ws-opts: {path: "/?fake=1", headers: {Host: "gentle-dusk-d5de.misty-finch-8d0b.workers.dev"}}, udp: false}
   - {name: "📊 0.00GB / 9999GB (0%)  |  📅 2099-01-01", server: 192.0.2.1, port: 443, type: vmess, uuid: 397fa3f8-22f0-4f2b-a2c1-12915b52e264, alterId: 0, cipher: auto, tls: true, servername: "gentle-dusk-d5de.misty-finch-8d0b.workers.dev", network: ws, ws-opts: {path: "/?fake=1", headers: {Host: "gentle-dusk-d5de.misty-finch-8d0b.workers.dev"}}, udp: false}
+  - name: "Nova-WARP"
+    type: wireguard
+    server: 162.159.192.1
+    port: 2408
+    ip: 172.16.0.2/32
+    ipv6: "2606:4700:110:856d:1fb4:4c0e:4388:def6/128"
+    private-key: "t3Znp2F8CuU7cQsMvOHt6mlE5gO3cHXxYs2ShR++27I="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    reserved: "YQQC"
+    udp: true
+    mtu: 1280
+    amnezia-wg-option: {jc: 4, jmin: 40, jmax: 70}
   - {name: "سرویس رایگان نوا @irnova_proxy gentle-dusk-d5de.misty-finch-8d0b.workers.dev:443 [VLESS]", server: gentle-dusk-d5de.misty-finch-8d0b.workers.dev, port: 443, type: vless, uuid: 397fa3f8-22f0-4f2b-a2c1-12915b52e264, tls: true, skip-cert-verify: false, servername: gentle-dusk-d5de.misty-finch-8d0b.workers.dev, client-fingerprint: unsafe, network: ws, ws-opts: {path: /video/SBtDHxFWRAIPQV0FW14BRB5AWBJXEV9MXFcbCxdRU0ECQEFdBxsbRBFSFUtaXUACEhcWEwpSQ1gFWkVUAkteExlAXV0WRlhVXlwVXEMAVxYaBBxfHhkWShASQhNGQQscCQMJBUg=, headers: {Host: gentle-dusk-d5de.misty-finch-8d0b.workers.dev}}}
   - {name: "سرویس رایگان نوا @irnova_proxy 104.21.29.109:443 [TROJAN]", server: 104.21.29.109, port: 443, type: trojan, password: 397fa3f8-22f0-4f2b-a2c1-12915b52e264, sni: gentle-dusk-d5de.misty-finch-8d0b.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: /video/SBtDHxFWRAIPQV0FW14BRB5AWBJXEV9MXFcbCxdRU0ECQEFdBxsbRBFSFUtaXUACEhcWEwpSQ1gFWkVUAkteExlAXV0WRlhVXlwVXEMAVxYaBBxfHhkWShASQhNGQQscCQMJBUg=, headers: {Host: gentle-dusk-d5de.misty-finch-8d0b.workers.dev}}}
   - {name: "سرویس رایگان نوا @irnova_proxy 77.37.33.39:2053 [SS]", server: 77.37.33.39, port: 2053, type: ss, cipher: aes-128-gcm, password: 397fa3f8-22f0-4f2b-a2c1-12915b52e264, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: gentle-dusk-d5de.misty-finch-8d0b.workers.dev, path: "/video/SBtDHxFWRAIPQV0FW14BRB5AWBJXEV9MXFcbCxdRU0ECQEFdBxsbRBFSFUtaXUACEhcWEwpSQ1gFWkVUAkteExlAXV0WRlhVXlwVXEMAVxYaBBxfHhkWShASQhNGQQscCQMJBUg\\=?enc\\=aes-128-gcm", tls: true, mux: false, skip-cert-verify: false}}
@@ -29057,4 +29069,4 @@ rules:
   - IP-CIDR,198.41.252.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,185.122.0.0/24,☁️ CloudFlareCDN,no-resolve
   - GEOIP,CN,🎯 全球直连
-  - MATCH,🐟 漏网之鱼
+  - MATCH,Nova-WARP
