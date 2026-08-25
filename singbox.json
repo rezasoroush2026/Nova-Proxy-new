@@ -78127,6 +78127,24 @@
       "tag": "REJECT"
     },
     {
+      "type": "wireguard",
+      "tag": "Nova-WARP",
+      "server": "162.159.192.1",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:856d:1fb4:4c0e:4388:def6/128"
+      ],
+      "private_key": "t3Znp2F8CuU7cQsMvOHt6mlE5gO3cHXxYs2ShR++27I=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        97,
+        4,
+        2
+      ],
+      "mtu": 1280
+    },
+    {
       "type": "vmess",
       "tag": "📢 https://t.me/irnova_proxy",
       "server": "192.0.2.1",
@@ -87779,7 +87797,7 @@
       }
     ],
     "auto_detect_interface": true,
-    "final": "🐟 漏网之鱼",
+    "final": "Nova-WARP",
     "rule_set": [
       {
         "tag": "geoip-cn",
